@@ -7,6 +7,8 @@ import View from 'ol/View';
 import sync from 'ol-hashed';
 import DragAndDrop from 'ol/interaction/DragAndDrop';
 import Modify from 'ol/interaction/Modify';
+import Draw from 'ol/interaction/Draw';
+
 
 const source = new VectorSource();
 
@@ -31,6 +33,13 @@ map.addInteraction(new DragAndDrop({
 }));
 
 map.addInteraction(new Modify({
+  source: source
+}));
+
+//creat a draw interaction configured to draw polygons
+//and add them to our vector source:
+map.addInteraction(new Draw({
+  type: 'Polygon',
   source: source
 }));
 
