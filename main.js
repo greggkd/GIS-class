@@ -8,6 +8,7 @@ import sync from 'ol-hashed';
 import DragAndDrop from 'ol/interaction/DragAndDrop';
 import Modify from 'ol/interaction/Modify';
 import Draw from 'ol/interaction/Draw';
+import Snap from 'ol/interaction/Snap';
 
 
 const source = new VectorSource();
@@ -42,6 +43,13 @@ map.addInteraction(new Draw({
   type: 'Polygon',
   source: source
 }));
+
+//configure snap interaction to work with our vector
+//source and add it to the map
+map.addInteraction(new Snap({
+  source: source
+}));
+
 
 sync(map);
 //alert('Hello Workshop');
