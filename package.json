@@ -5,10 +5,13 @@
   "private": true,
   "main": "main.js",
   "dependencies": {
+    "@mapbox/mapbox-gl-style-spec": "^13.1.0",
     "colormap": "^2.3.0",
+    "mapbox-to-css-font": "^2.2.0",
     "ol": "^5.1.3",
     "ol-hashed": "^2.0.0-beta.2",
-    "ol-mapbox-style": ">=3.0.0-beta.4 <3.0.0-c"
+    "ol-mapbox-style": "^3.0.0-beta.9",
+    "webfont-matcher": "^1.1.0"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^4.5.1",
@@ -18,7 +21,7 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.21.0",
-    "webpack": "^4.8.1",
+    "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.4"
   },
@@ -30,5 +33,20 @@
     "test": "npm run lint",
     "start": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production"
-  }
+  },
+  "directories": {
+    "doc": "doc",
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greggkd/GIS-class.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greggkd/GIS-class/issues"
+  },
+  "homepage": "https://github.com/greggkd/GIS-class#readme"
 }
